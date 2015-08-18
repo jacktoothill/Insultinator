@@ -1,23 +1,24 @@
+var Insultinator = {
 
-//store the name
-var name; 
+	name: "",
+	verb: ['muggle', 'twatting', 'pissing', 'soggy', 'fishy', 'willy', 'wet'],
+	noun: ['fuck', 'cunt', 'shit', 'bastard', 'tit', 'cockend'],
 
-//store two arrays of insults
-var insultOne = ['muggle', 'twatting', 'pissing', 'soggy', 'fishy', 'willy', 'wet']; 
-var insultTwo =['fuck', 'cunt', 'shit', 'bastard', 'tit', 'cockend'];
+	init: function(){
 
-//function for randomising
-function random (min, max){ 
-        return Math.floor(Math.random() * (max-min)) + min; 
-} 
+		this.name = document.getElementById('textbox').value;
 
-//storing the random insults ready to print to document
-var numberOne = random(0, insultOne.length); 
-var numberTwo = random(0, insultTwo.length);
+		document.getElementById("text").innerHTML = (
+			"Hey " + this.name + ", you " + this.verb[this.random(0, this.verb.length)]
+			+ " " + this.noun[this.random(0, this.noun.length)] + "!"
+		);
 
-//Write message to document and get name from input
+		return false;
 
-function nameFunction(){
-	name = document.getElementById('textbox').value;
-	document.getElementById("text").innerHTML = ("Hey " + name + ", you " + insultOne[numberOne] + " " + insultTwo[numberTwo] + "!"); 
+	},
+
+	random: function(min, max){
+		return Math.floor(Math.random() * (max-min)) + min;
+	}
+
 }
