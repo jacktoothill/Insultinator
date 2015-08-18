@@ -1,6 +1,6 @@
 
-//prompt for the twats name
-var name = prompt('What is your name?'); 
+//store the name
+var name; 
 
 //store two arrays of insults
 var insultOne = ['muggle', 'twatting', 'pissing', 'soggy', 'fishy', 'willy', 'wet']; 
@@ -15,6 +15,9 @@ function random (min, max){
 var numberOne = random(0, insultOne.length); 
 var numberTwo = random(0, insultTwo.length);
 
-//Write message to document
-document.write("Hey " + name + ", you " + insultOne[numberOne] + " " + insultTwo[numberTwo] + "!"); 
+//Write message to document and get name from input
 
+function nameFunction(){
+	name = document.getElementById('textbox').value;
+	document.getElementById("text").innerHTML = ("Hey " + name + ", you " + insultOne[numberOne] + " " + insultTwo[numberTwo] + "!"); 
+}
