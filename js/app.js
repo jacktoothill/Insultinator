@@ -1,8 +1,8 @@
 var Insultinator = {
 
 	name: "",
-	verb: ['muggle', 'twatting', 'pissing', 'soggy', 'fishy', 'willy', 'wet'],
-	noun: ['fuck', 'cunt', 'shit', 'bastard', 'tit', 'cockend'],
+	verb: ['silly', 'soppy', 'wet', 'soggy', 'dopey'],
+	noun: ['twit', 'twerp', 'pansy', 'turnip', 'git'],
 
 	init: function(){
 
